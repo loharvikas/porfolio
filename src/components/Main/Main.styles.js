@@ -38,3 +38,13 @@ export const Link = styled.a`
     list-style: none;
     cursor: pointer;
 `
+
+export const Circle = styled.div`
+    width:500px;
+    height: 500px;
+    background: radial-gradient(closest-side,#2dd4bf,rgba(233,168,2,0));
+    -webkit-animation: traverse-up-left 10s ease-in-out infinite alternate;
+    animation: traverse-up-left 10s ease-in-out infinite alternate;
+    transform: translateY(-200px) translateX(-350px) rotate(180deg);
+    z-index: -1
+`

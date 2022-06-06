@@ -1,4 +1,4 @@
-import { Container, Title, SubTitle, Text, Link, Image, Pane } from "./Jumbotron.styles";
+import { Container, Title, SubTitle, Text, Link, Image, Pane, Stack } from "./Jumbotron.styles";
 
 export default function Jumbotron({ children, direction = 'row', restProps }) {
     return (
@@ -25,6 +25,9 @@ Jumbotron.Link = function JumbotronLink({ children, ...restProps }) {
     return <Link {...restProps}>{children}</Link>;
 };
 
+Jumbotron.Stack = function JumbotronStack({ children, ...restProps }) {
+    return <Stack {...restProps}>{children}</Stack>;
+};
 
 Jumbotron.Image = function JumbotronImage({ ...restProps }) {
     return <Image {...restProps} />;
