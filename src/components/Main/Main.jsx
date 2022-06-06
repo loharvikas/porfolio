@@ -1,6 +1,6 @@
-import { Section, Avatar, Title, Text, Social, Link, Circle } from "./Main.styles";
+import { Section, Avatar, Title, Text, Social, Link, } from "./Main.styles";
 import Profile from '../../assets/images/profile.jpg'
-import { GithubSVG, LinkedInSVG, TwitterSVG, QuoraSVG } from "../../assets/icons";
+import { GithubSVG, LinkedInSVG, LeetcodeSVG, QuoraSVG, UpworkSVG } from "../../assets/icons";
 
 export default function Main() {
     return (
@@ -11,10 +11,11 @@ export default function Main() {
             <br />
             <br />
             <Social flexDirection="row">
-                <Link href="#"><TwitterSVG /></Link>
-                <Link href="#"><LinkedInSVG /></Link>
-                <Link href="#"><GithubSVG /></Link>
-                <Link href="#">< QuoraSVG /></Link>
+                <Link href="https://leetcode.com/loharvikas13/" target="_blank"><LeetcodeSVG /></Link>
+                <Link href="https://www.linkedin.com/in/vikas-lohar-263566154/" target="_blank"><LinkedInSVG /></Link>
+                <Link href="https://github.com/loharvikas" target="_blank"><GithubSVG /></Link>
+                <Link href="https://www.quora.com/profile/Vikas-Lohar-6" target="_blank">< QuoraSVG /></Link>
+                <Link href="https://www.upwork.com/freelancers/~0174a4780ee609f3ba" target="_blank">< UpworkSVG /></Link>
             </Social>
         </Section>
     )

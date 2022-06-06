@@ -32,6 +32,7 @@ export const Social = styled.div`
     width: 100%;
     gap: 2rem;
     margin-top: 1.5rem;
+    position: relative;
 `
 
 export const Link = styled.a`

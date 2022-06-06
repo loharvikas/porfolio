@@ -8,7 +8,15 @@ const Home = () => {
     return (
         <Wrapper>
             <Main />
-            <Heading>Tools</Heading>
+            <Heading>Technologies I'have been working with</Heading>
+            <div>
+                <p><Bold >Languages</Bold>: Python, Javascript, Java, C</p>
+                <p><Bold>Framework</Bold>: React, Django</p>
+                <p><Bold>Library</Bold>: Redux, Styled-components, Django rest framework</p>
+                <p><Bold>Database</Bold>: Postgresql, Mysql</p>
+                <p><Bold>Platform</Bold>: Linux </p>
+                <p><Bold>Version control</Bold>: Git, Github</p>
+            </div>
             <Heading>Stuff I've created</Heading>
             {data.map(item => (
                 <Jumbotron direction={item.direction} key={item.id}>
@@ -61,6 +69,12 @@ const Decorator = styled.div`
     border: 2px solid lightgreen;
 `
 
+const Bold = styled.span`
+    color: lightgreen;
+    font-weight: bold;
+    font-size: 1.2rem;
+`
+
 const Heading = styled.h1`
     position: relative;
     text-align: center;
@@ -85,7 +99,9 @@ const Mail = styled.a`
     &:hover {
         filter: brightness(1.5);
     }
-
+    margin-bottom: 10rem;
 `
+
+
 
 export default Home;

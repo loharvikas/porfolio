@@ -6,8 +6,13 @@ export const Container = styled.div`
     flex-direction: ${({ direction }) => direction};
     justify-content: space-between;
     align-items: center;
-    height: 70vh;
+    min-height: 70vh;
     gap: 3rem;
+
+    @media screen and (max-width: 1200px){
+        flex-direction: column;
+        width: 100%;
+    }
 `
 
 export const Pane = styled.div``
