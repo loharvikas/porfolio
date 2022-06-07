@@ -6,7 +6,7 @@ export default function Jumbotron({ children, direction = 'row', restProps }) {
     )
 }
 Jumbotron.Pane = function JumbotronPane({ children, ...restProps }) {
-    return <Pane {...restProps}>{children}</Pane>;
+    return <Pane {...restProps} >{children}</Pane>;
 };
 
 Jumbotron.Title = function JumbotronTitle({ children, ...restProps }) {

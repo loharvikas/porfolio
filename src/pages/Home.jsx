@@ -1,38 +1,52 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import { Jumbotron, Main } from "../components";
 import data from '../fixtures/jumbo.json';
 import alertific from '../assets/images/alertific/first.png'
 import { GithubSVG, LinkSVG } from '../assets/icons';
+import Fade from 'react-reveal/Fade';
 
 const Home = () => {
+
     return (
         <Wrapper>
             <Main />
-            <Heading>Technologies I'have been working with</Heading>
-            <div>
-                <p><Bold >Languages</Bold>: Python, Javascript, Java, C</p>
-                <p><Bold>Framework</Bold>: React, Django</p>
-                <p><Bold>Library</Bold>: Redux, Styled-components, Django rest framework</p>
-                <p><Bold>Database</Bold>: Postgresql, Mysql</p>
-                <p><Bold>Platform</Bold>: Linux </p>
-                <p><Bold>Version control</Bold>: Git, Github</p>
-            </div>
+            <Fade bottom>
+                <Heading>Technologies I'have been working with</Heading>
+            </Fade>
+            <Fade bottom>
+                <div>
+                    <p><Bold >Languages</Bold>: Python, Javascript, Java, C</p>
+                    <p><Bold>Framework</Bold>: React, Django</p>
+                    <p><Bold>Library</Bold>: Redux, Styled-components, Django rest framework</p>
+                    <p><Bold>Database</Bold>: Postgresql, Mysql</p>
+                    <p><Bold>Platform</Bold>: Linux </p>
+                    <p><Bold>Version control</Bold>: Git, Github</p>
+                </div>
+            </Fade>
             <Heading>Stuff I've created</Heading>
             {data.map(item => (
-                <Jumbotron direction={item.direction} key={item.id}>
-                    <Jumbotron.Pane>
-                        <Jumbotron.Title size="3rem">{item.title}</Jumbotron.Title>
-                        <Jumbotron.SubTitle>{item.subtitle}</Jumbotron.SubTitle>
-                        <Decorator>
-                            <Jumbotron.Text>{item.description}</Jumbotron.Text>
-                        </Decorator>
-                        <Jumbotron.Stack>{item['tech-stack']}</Jumbotron.Stack>
-                        <Jumbotron.Link href={item.github}><GithubSVG /></Jumbotron.Link>
-                        <Jumbotron.Link href={item.link}><LinkSVG /></Jumbotron.Link>
-                    </Jumbotron.Pane>
-                    <Jumbotron.Pane>
-                        <Jumbotron.Image src={alertific} />
-                    </Jumbotron.Pane>
+                <Jumbotron direction={item.direction} key={item.id} >
+                    <Fade left>
+
+                        <Jumbotron.Pane>
+                            <Jumbotron.Title size="3rem">{item.title}</Jumbotron.Title>
+                            <Jumbotron.SubTitle>{item.subtitle}</Jumbotron.SubTitle>
+                            <Decorator>
+                                <Jumbotron.Text>{item.description}</Jumbotron.Text>
+                            </Decorator>
+                            <Jumbotron.Stack>{item['tech-stack']}</Jumbotron.Stack>
+                            <Jumbotron.Link href={item.github}><GithubSVG /></Jumbotron.Link>
+                            <Jumbotron.Link href={item.link}><LinkSVG /></Jumbotron.Link>
+                        </Jumbotron.Pane>
+                    </Fade>
+                    <Fade right>
+
+                        <Jumbotron.Pane >
+                            <Jumbotron.Image src={alertific} />
+                        </Jumbotron.Pane>
+                    </Fade>
+
                 </Jumbotron>
             ))}
             <Heading>Get in touch</Heading>
@@ -76,7 +90,7 @@ const Bold = styled.span`
 `
 
 const Heading = styled.h1`
-    position: relative;
+position: relative;
     text-align: center;
     color: pink;
     font-size: 3rem;
