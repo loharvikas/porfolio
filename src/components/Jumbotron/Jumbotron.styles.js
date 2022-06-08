@@ -11,11 +11,15 @@ export const Container = styled.div`
 
     @media screen and (max-width: 1200px){
         flex-direction: column;
-        width: 100%;
+        /* width: 100%; */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 `
 
-export const Pane = styled.div``
+export const Pane = styled.div`
+`
 
 export const Stack = styled.div`
     text-transform: uppercase;
@@ -57,7 +61,6 @@ export const Link = styled.a`
 
 export const Image = styled.img`
     max-width: 600px;
-    height: 400px;
     max-height: 600px;
     overflow: hidden;
     border-radius: 5px;
