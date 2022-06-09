@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Section = styled.div`
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 600px;
     padding: 2rem;
     text-align: center;
     margin-top: 5rem;
@@ -14,9 +14,10 @@ export const Title = styled.h1`
 `
 
 export const Text = styled.div`
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--SECONDARY-TEXT-COLOR);
-    line-height: 1.5rem;
+    line-height: 1.8rem;
+    font-weight: 400;
 
 `
 
@@ -47,5 +48,10 @@ export const Circle = styled.div`
     -webkit-animation: traverse-up-left 10s ease-in-out infinite alternate;
     animation: traverse-up-left 10s ease-in-out infinite alternate;
     transform: translateY(-200px) translateX(-350px) rotate(180deg);
-    z-index: -1
+    z-index: -1;
+`
+
+export const Span = styled.span`
+    color:rgb(45 212 191);
+    font-weight: bold;
 `

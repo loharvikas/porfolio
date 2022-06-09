@@ -1,4 +1,4 @@
-import { Section, Avatar, Title, Text, Social, Link, } from "./Main.styles";
+import { Section, Avatar, Title, Text, Social, Link, Span } from "./Main.styles";
 import Profile from '../../assets/images/profile.jpg'
 import { GithubSVG, LinkedInSVG, LeetcodeSVG, QuoraSVG, UpworkSVG } from "../../assets/icons";
 import Fade from "react-reveal/Fade";
@@ -11,7 +11,7 @@ export default function Main() {
             </Fade>
             <Title>Hey there, 👋</Title>
             <Fade bottom>
-                <Text data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ex odio harum quam voluptatum exercitationem incidunt est deleniti facere reprehenderit expedita quidem et officiis sed, aspernatur voluptate dicta! Repudiandae excepturi dolorem veniam mollitia fugit eligendi voluptatum fuga aperiam impedit quos, sed delectus atque a quaerat ipsa itaque nostrum molestias officia sint repellat cum, ab corporis? Repudiandae neque saepe ipsa harum.</Text>
+                <Text data-aos="fade-up">I'm <Span>Vikas Lohar</Span>, a self taught Full stack developer, <Span>Freelancer</Span> and student. I am sophomore studying Computer Science and Engineering from U.V.P.C.E . I've been building stuff on web since I wrote my first "Hello World" a year ago. I love building stuff using <Span>Django</Span> and <Span>React</Span> amazing combination right ?. You can find my relevant profiles on different platforms down here.</Text>
             </Fade>
             <br />
             <br />
@@ -25,3 +25,4 @@ export default function Main() {
         </Section>
     )
 }
+
